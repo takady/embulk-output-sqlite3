@@ -1,6 +1,6 @@
-# Embulk::Plugin::Sqlite3
+# SQLite3 plugin for Embulk
 
-SQLite3 plugin for Embulk
+embulk-plugin-sqlite3 provides output plugin for Embulk
 
 ## Installation
 
@@ -9,30 +9,15 @@ SQLite3 plugin for Embulk
 ## Configuration
 
 ```yaml
-in:
-  type: file
-  paths: [/Users/takady/work/try1/csv]
-  decoders:
-  - {type: gzip}
-  parser:
-    charset: UTF-8
-    newline: CRLF
-    type: csv
-    delimiter: ','
-    quote: '"'
-    header_line: true
-    columns:
-    - {name: id, type: long}
-    - {name: account, type: long}
-    - {name: time, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
-    - {name: purchase, type: timestamp, format: '%Y%m%d'}
-    - {name: comment, type: string}
-exec: {}
 out:
   type: sqlite3
-  database: '/Users/takady/work/test.db'
+  database: '/tmp/test.db'
   table: 'load01'
 ```
+
+## TODO
+
+- implement input pugin
 
 ## Contributing
 

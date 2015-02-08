@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["takadyuichi@gmail.com"]
   spec.summary       = "SQLite3 plugin for Embulk"
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/takady/embulk-plugin-sqlite3/fork"
+  spec.homepage      = "https://github.com/takady/embulk-plugin-sqlite3"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
