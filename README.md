@@ -32,12 +32,6 @@ out:
   type: sqlite3
   database: '/Users/takady/work/test.db'
   table: 'load01'
-  columns:
-  - {name: id, type: integer}
-  - {name: account, type: integer}
-  - {name: time, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
-  - {name: purchase, type: timestamp, format: '%Y%m%d'}
-  - {name: comment, type: string}
 ```
 
 ## Contributing
