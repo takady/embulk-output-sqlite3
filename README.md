@@ -1,6 +1,6 @@
 # Sqlite3 output plugin for Embulk
 
-TODO: Write short description here and embulk-output-sqlite3.gemspec file.
+embulk-output-sqlite3 provides output plugin for Embulk.
 
 ## Overview
 
@@ -11,16 +11,16 @@ TODO: Write short description here and embulk-output-sqlite3.gemspec file.
 
 ## Configuration
 
-- **property1**: description (string, required)
-- **property2**: description (integer, default: default-value)
+- **database**: path of sqlite3 database (string, required)
+- **table**: name of insert table(string, required)
 
 ## Example
 
 ```yaml
 out:
   type: sqlite3
-  property1: example1
-  property2: example2
+  database: '/tmp/test.db'
+  table: 'load01'
 ```
 
 
