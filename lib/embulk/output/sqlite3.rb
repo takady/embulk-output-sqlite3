@@ -21,10 +21,6 @@ module Embulk
           execute_sql(sqlite, %[create table if not exists #{task['table']}(#{to_sqlite_schema(schema)})])
         end
 
-        # resumable output:
-        # resume(task, schema, count, &control)
-
-        # non-resumable output:
         commit_reports = yield(task)
         next_config_diff = {}
         return next_config_diff
@@ -71,15 +67,7 @@ module Embulk
         end
       end
 
-      #def self.resume(task, schema, count, &control)
-      #  commit_reports = yield(task)
-      #
-      #  next_config_diff = {}
-      #  return next_config_diff
-      #end
-
       def init
-        # initialization code:
         @sqlite = self.class.connect(task)
         @records = 0
       end
@@ -124,7 +112,7 @@ module Embulk
 
       def commit
         commit_report = {
-          "records" => @records          
+          "records" => @records
         }
         return commit_report
       end
