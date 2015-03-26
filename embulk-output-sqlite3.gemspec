@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name          = "embulk-plugin-sqlite3"
+  spec.name          = "embulk-output-sqlite3"
   spec.version       = "0.0.1"
   spec.authors       = ["Yuichi Takada"]
   spec.email         = ["takadyuichi@gmail.com"]
-  spec.summary       = "SQLite3 plugin for Embulk"
+  spec.summary       = "SQLite3 output plugin for Embulk"
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/takady/embulk-plugin-sqlite3"
+  spec.homepage      = "https://github.com/takady/embulk-output-sqlite3"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in embulk-plugin-sqlite3.gemspec
+# Specify your gem's dependencies in embulk-output-sqlite3.gemspec
 gemspec
